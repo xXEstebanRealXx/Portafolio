@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal</title>
+
+    <!-- Archivo CSS compilado desde SCSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header class="header" id="inicio">
+        <div class="header__contenido">
+            <img 
+                src="img/foto-perfil.jpg" 
+                alt="Fotografía profesional del estudiante"
+                class="header__imagen"
+            >
+
+            <h1 class="header__titulo">Esteban Real Trujillo</h1>
+
+            <p class="header__descripcion">
+                Soy estudiante de desarrollo de software con interés en la creación de soluciones digitales,
+                diseño web, programación y aprendizaje constante de nuevas tecnologías.
+            </p>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="nav">
+        <a href="#inicio" class="nav__link">Inicio</a>
+        <a href="#perfil" class="nav__link">Perfil</a>
+        <a href="#academico" class="nav__link">Académico</a>
+        <a href="#proyectos" class="nav__link">Proyectos</a>
+        <a href="#audio" class="nav__link">Audio</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+    </nav>
+
+    <main>
+
+        <!-- Perfil profesional -->
+        <section class="section" id="perfil">
+            <h2 class="section__titulo">Perfil profesional</h2>
+
+            <p class="section__texto">
+                Soy una persona responsable, creativa y comprometida con mi formación académica.
+                Me interesa el desarrollo de aplicaciones web, la resolución de problemas mediante la tecnología
+                y el trabajo colaborativo en proyectos de programación.
+            </p>
+
+            <div class="objetivos">
+                <h3 class="objetivos__titulo">Objetivos profesionales</h3>
+
+                <p class="objetivos__texto">
+                    Mi objetivo profesional es fortalecer mis conocimientos en programación, bases de datos
+                    y desarrollo web para participar en proyectos tecnológicos que aporten soluciones reales
+                    a las necesidades de las personas y organizaciones.
+                </p>
+            </div>
+        </section>
+
+        <!-- Información de contacto -->
+        <section class="section" id="contacto">
+            <h2 class="section__titulo">Información de contacto</h2>
+
+            <div class="contacto">
+                <p><strong>Correo electrónico:</strong> estebanreal2002@gmail.com</p>
+                <p><strong>Teléfono:</strong> +57 321 261 7598</p>
+                <p><strong>Ciudad:</strong> Bogotá, Colombia</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/usuario</p>
+                <p><strong>GitHub:</strong> github.com/usuario</p>
+            </div>
+        </section>
+
+        <!-- Sección académica -->
+        <section class="section" id="academico">
+            <h2 class="section__titulo">Sección académica</h2>
+
+            <div class="academico">
+                <article class="academico__bloque">
+                    <h3>Formación académica</h3>
+                    <ul>
+                        <li>Técnico/Tecnólogo/Profesional en Desarrollo de Software - Nombre de la institución</li>
+                        <li>Bachiller Académico - Robert F Kennedy</li>
+                    </ul>
+                </article>
+
+                <article class="academico__bloque">
+                    <h3>Cursos o certificaciones</h3>
+                    <ul>
+                        <li>Curso básico de HTML, CSS y JavaScript</li>
+                        <li>Curso de fundamentos de programación</li>
+                        <li>Certificación en bases de datos relacionales</li>
+                    </ul>
+                </article>
+
+                <article class="academico__bloque">
+                    <h3>Competencias técnicas</h3>
+                    <ul>
+                        <li>Diseño y desarrollo de páginas web</li>
+                        <li>Manejo básico de bases de datos</li>
+                        <li>Uso de herramientas de control de versiones como Git y GitHub</li>
+                        <li>Resolución de problemas mediante algoritmos</li>
+                    </ul>
+                </article>
+
+                <article class="academico__bloque">
+                    <h3>Lenguajes de programación conocidos</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SCSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de proyectos -->
+        <section class="section" id="proyectos">
+            <h2 class="section__titulo">Proyectos académicos o personales</h2>
+
+            <div class="proyectos">
+
+                <article class="proyecto">
+                    <img 
+                        src="img/proyecto1.jpg" 
+                        alt="Captura del proyecto página web personal"
+                        class="proyecto__imagen"
+                    >
+
+                    <div class="proyecto__contenido">
+                        <h3 class="proyecto__titulo">Proyecto 1: Página web personal</h3>
+
+                        <p class="proyecto__descripcion">
+                            Desarrollo de una página web tipo portafolio para presentar información personal,
+                            formación académica, habilidades y proyectos realizados.
+                        </p>
+
+                        <p class="proyecto__subtitulo"><strong>Tecnologías utilizadas:</strong></p>
+
+                        <ul class="proyecto__lista">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SCSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="proyecto">
+                    <img 
+                        src="img/proyecto2.jpg" 
+                        alt="Captura del proyecto sistema de tareas"
+                        class="proyecto__imagen"
+                    >
+
+                    <div class="proyecto__contenido">
+                        <h3 class="proyecto__titulo">Proyecto 2: Sistema de gestión de tareas</h3>
+
+                        <p class="proyecto__descripcion">
+                            Aplicación sencilla para registrar, listar y organizar tareas académicas o personales,
+                            permitiendo mejorar la productividad del usuario.
+                        </p>
+
+                        <p class="proyecto__subtitulo"><strong>Tecnologías utilizadas:</strong></p>
+
+                        <ul class="proyecto__lista">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>LocalStorage</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Audio -->
+        <section class="section" id="audio">
+            <h2 class="section__titulo">Audio de presentación personal</h2>
+
+            <div class="audio">
+                <p class="audio__texto">
+                    Escucha mi presentación personal:
+                </p>
+
+                <audio id="audioPresentacion">
+                    <source src="audio/audio-presentacion.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+
+                <div class="audio__botones">
+                    <button class="boton boton--play" id="btnReproducir">
+                        Reproducir
+                    </button>
+
+                    <button class="boton boton--pause" id="btnPausar">
+                        Pausar
+                    </button>
+                </div>
+
+                <p class="audio__estado" id="estadoAudio">
+                    Estado: Audio detenido
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">
+            &copy; 2026 - Portafolio personal del estudiante
+        </p>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

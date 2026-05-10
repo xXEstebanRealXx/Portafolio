@@ -1,0 +1,360 @@
+// ===============================
+// Variables
+// ===============================
+
+$color-primario: #1e3c72;
+$color-secundario: #2a5298;
+$color-oscuro: #102542;
+$color-claro: #f4f6f8;
+$color-blanco: #ffffff;
+$color-texto: #222222;
+$color-borde: #dddddd;
+$color-hover: #66ccff;
+
+$fuente-principal: Arial, Helvetica, sans-serif;
+
+$radio-borde: 12px;
+$sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+$contenedor-maximo: 1100px;
+
+// ===============================
+// Mixins
+// ===============================
+
+@mixin contenedor {
+    max-width: $contenedor-maximo;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+@mixin tarjeta {
+    background-color: $color-blanco;
+    border-radius: $radio-borde;
+    box-shadow: $sombra;
+}
+
+@mixin boton-base {
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+// ===============================
+// Estilos generales
+// ===============================
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $fuente-principal;
+    background-color: $color-claro;
+    color: $color-texto;
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+// ===============================
+// Header
+// ===============================
+
+.header {
+    background: linear-gradient(135deg, $color-primario, $color-secundario);
+    color: $color-blanco;
+    padding: 50px 20px;
+    text-align: center;
+
+    &__contenido {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__imagen {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid $color-blanco;
+        margin-bottom: 20px;
+    }
+
+    &__titulo {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    &__descripcion {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: auto;
+    }
+}
+
+// ===============================
+// Navegación
+// ===============================
+
+.nav {
+    background-color: $color-oscuro;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    &__link {
+        color: $color-blanco;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-hover;
+        }
+    }
+}
+
+// ===============================
+// Secciones
+// ===============================
+
+.section {
+    @include contenedor;
+    @include tarjeta;
+
+    &__titulo {
+        color: $color-primario;
+        margin-bottom: 20px;
+        border-bottom: 3px solid $color-secundario;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    &__texto {
+        margin-bottom: 20px;
+    }
+}
+
+// ===============================
+// Objetivos
+// ===============================
+
+.objetivos {
+    margin-top: 20px;
+
+    &__titulo {
+        color: $color-oscuro;
+        margin-bottom: 10px;
+    }
+
+    &__texto {
+        margin-bottom: 10px;
+    }
+}
+
+// ===============================
+// Contacto
+// ===============================
+
+.contacto {
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+// ===============================
+// Académico
+// ===============================
+
+.academico {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    &__bloque {
+        background-color: #fafafa;
+        border: 1px solid $color-borde;
+        padding: 20px;
+        border-radius: 10px;
+
+        h3 {
+            color: $color-oscuro;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// ===============================
+// Proyectos
+// ===============================
+
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.proyecto {
+    border: 1px solid $color-borde;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fafafa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $sombra;
+    }
+
+    &__imagen {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    &__contenido {
+        padding: 20px;
+    }
+
+    &__titulo {
+        color: $color-oscuro;
+        margin-bottom: 10px;
+    }
+
+    &__descripcion {
+        margin-bottom: 15px;
+    }
+
+    &__subtitulo {
+        margin-bottom: 5px;
+    }
+
+    &__lista {
+        margin-top: 5px;
+    }
+}
+
+// ===============================
+// Audio
+// ===============================
+
+.audio {
+    text-align: center;
+
+    &__texto {
+        margin-bottom: 15px;
+    }
+
+    &__botones {
+        margin-top: 20px;
+    }
+
+    &__estado {
+        margin-top: 15px;
+        font-weight: bold;
+        color: $color-oscuro;
+    }
+}
+
+.boton {
+    @include boton-base;
+
+    &--play {
+        background-color: $color-primario;
+        color: $color-blanco;
+
+        &:hover {
+            background-color: $color-secundario;
+        }
+    }
+
+    &--pause {
+        background-color: #b02a37;
+        color: $color-blanco;
+
+        &:hover {
+            background-color: #dc3545;
+        }
+    }
+}
+
+// ===============================
+// Footer
+// ===============================
+
+.footer {
+    background-color: $color-oscuro;
+    color: $color-blanco;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+
+    &__texto {
+        margin: 0;
+    }
+}
+
+// ===============================
+// Responsive
+// ===============================
+
+@media screen and (max-width: 768px) {
+    .academico {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        &__link {
+            display: inline-block;
+            margin: 8px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        &__titulo {
+            font-size: 1.7rem;
+        }
+
+        &__imagen {
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    .section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .nav {
+        &__link {
+            display: block;
+            margin: 10px 0;
+        }
+    }
+
+    .boton {
+        width: 80%;
+        margin: 8px auto;
+        display: block;
+    }
+}
